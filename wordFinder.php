@@ -9,7 +9,7 @@
     <?php
     require("words.php");
     if (isset($_GET['search'])) {
-        $ans = $d1->getSimilarWords($_GET['search']);
+        $ans = $d1->getSimilarWords(htmlspecialchars($_GET['search']));
     }
 
     foreach ($ans as $word) {
