@@ -11,6 +11,7 @@ class Dictionary
         # Split the paragraph with <space> delimiter
         $this->words = explode(' ', $paragraph);
         $this->words = array_unique($this->words);
+        $this->words = array_values($this->words);
     }
 
     public function getSimilarWords($wordToSearch)
